@@ -1,0 +1,24 @@
+<VirtualHost *:80>
+
+        ServerAdmin webmaster@localhost
+        ServerName ${DOMAIN}
+        ServerAlias www.${DOMAIN}
+
+        DocumentRoot /var/www/${DOMAIN}/htdocs/current/web
+
+        ErrorLog /var/www/${DOMAIN}/log/error.log
+        CustomLog /var/www/${DOMAIN}/log/access.log combined
+
+        <Directory />
+          Options FollowSymLinks
+          AllowOverride None
+        </Directory>
+
+        <Directory /var/www/${DOMAIN}>
+          Options Indexes FollowSymLinks MultiViews
+          AllowOverride None
+          Order allow,deny
+          allow from all
+        </Directory>
+
+</VirtualHost>

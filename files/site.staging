@@ -1,0 +1,23 @@
+<VirtualHost *:80>
+
+        ServerAdmin webmaster@localhost
+        ServerName staging.${DOMAIN}
+
+        DocumentRoot /var/www/staging.${DOMAIN}/htdocs/current/web
+
+        ErrorLog /var/www/staging.${DOMAIN}/log/error.log
+        CustomLog /var/www/staging.${DOMAIN}/log/access.log combined
+
+        <Directory />
+          Options FollowSymLinks
+          AllowOverride None
+        </Directory>
+
+        <Directory /var/www/staging.${DOMAIN}>
+          Options Indexes FollowSymLinks MultiViews
+          AllowOverride None
+          Order allow,deny
+          allow from all
+        </Directory>
+
+</VirtualHost>
