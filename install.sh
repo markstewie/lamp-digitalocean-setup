@@ -31,7 +31,7 @@ sudo ln -s /etc/apache2/sites-available/staging.$DOMAIN /etc/apache2/sites-enabl
 # sudo nano /etc/nginx/nginx.conf
 
 # COPY MODIFYIED PHP INI
-cp files/php.ini /etc/php5/fpm/php.ini
+cp files/php.ini /etc/php5/apache2/php.ini
 
 # SECURE SERVER
 echo "_________________________________________";
