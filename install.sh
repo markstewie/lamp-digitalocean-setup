@@ -41,7 +41,7 @@ passwd
 
 echo "_________________________________________";
 echo "=>> Next we need to add the new 'deploy' user who will also require a strong password";
-read -p "    Add a strong password for the `deploy` user and enter through prompts that follow... " OK
+read -p "    Add a strong password for the 'deploy' user and enter through prompts that follow... " OK
 adduser deploy
 
 echo "_________________________________________";
